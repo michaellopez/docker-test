@@ -1,5 +1,4 @@
-FROM node:6.9.5-alpine
+FROM michaellopez/docker-test:latest-base
 
-ONBUILD ARG prefix=app/
+COPY app/package.json /derived.json
 
-ONBUILD COPY ${prefix}/package.json /app/package.json
